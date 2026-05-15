@@ -4,11 +4,11 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-  "start:all": "concurrently \"npm run dev --prefix server\" \"vite\"",
-  "backend": "npm run dev --prefix server",
-  "frontend": "vite",
-  "build": "vite build",
-  "preview": "vite preview"
+    "start:all": "concurrently \"npm run dev --prefix server\" \"vite\"",
+    "backend": "npm run dev --prefix server",
+    "frontend": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
     "@dnd-kit/core": "^6.3.1",
