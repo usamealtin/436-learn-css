@@ -1,0 +1,118 @@
+{
+  "common": {
+    "home": "Ana Sayfa",
+    "courses": "Kurslar",
+    "editor": "Editör",
+    "dashboard": "Kontrol Paneli",
+    "settings": "Ayarlar",
+    "profile": "Profil",
+    "logout": "Çıkış",
+    "login": "Giriş",
+    "signup": "Kayıt Ol",
+    "submit": "Gönder",
+    "cancel": "İptal",
+    "save": "Kaydet",
+    "loading": "Yükleniyor...",
+    "error": "Hata",
+    "success": "Başarılı"
+  },
+  "auth": {
+    "signIn": "Giriş Yap",
+    "signUp": "Kayıt Ol",
+    "forgotPassword": "Şifremi Unuttum?",
+    "email": "E-posta",
+    "password": "Şifre",
+    "confirmPassword": "Şifre Tekrar",
+    "username": "Kullanıcı Adı",
+    "firstName": "Ad",
+    "lastName": "Soyad",
+    "resetPassword": "Şifre Sıfırla",
+    "sendResetLink": "Sıfırlama Bağlantısı Gönder",
+    "backToLogin": "Girişe Dön",
+    "noAccount": "Hesabınız yok mu?",
+    "haveAccount": "Zaten hesabınız var mı?",
+    "resetEmailSent": "Şifre sıfırlama e-postası gönderildi!"
+  },
+  "lms": {
+    "modules": "Modüller",
+    "lessons": "Dersler",
+    "quiz": "Quiz",
+    "nextLesson": "Sonraki Ders",
+    "previousLesson": "Önceki Ders",
+    "completeLesson": "Dersi Tamamla",
+    "startQuiz": "Quiz Başlat",
+    "submitQuiz": "Quiz Gönder",
+    "quizPassed": "Quiz Geçildi! 🎉",
+    "quizFailed": "Quiz Başarısız",
+    "passingScore": "Geçme Notu: %80",
+    "yourScore": "Puanınız",
+    "moduleLocked": "Modül Kilitli",
+    "lessonLocked": "Ders Kilitli",
+    "completePrerequisites": "Kilidi açmak için önceki dersleri tamamlayın",
+    "retakeExam": "Tekrar Sınavı",
+    "finalExam": "Final Sertifika Sınavı",
+    "certificate": "Sertifika",
+    "downloadCertificate": "Sertifikayı İndir",
+    "addToLinkedIn": "LinkedIn'e Ekle"
+  },
+  "dashboard": {
+    "welcome": "Tekrar hoş geldin, {{name}}!",
+    "progress": "Genel İlerleme",
+    "lessonsCompleted": "Tamamlanan Dersler",
+    "averageScore": "Ortalama Puan",
+    "currentStreak": "Mevcut Seri",
+    "days": "gün",
+    "activityCalendar": "Aktivite Takvimi",
+    "shareProgress": "İlerlemeyi Paylaş",
+    "shareOnLinkedIn": "LinkedIn'de Paylaş",
+    "noActivity": "Henüz aktivite yok. Öğrenmeye başla!"
+  },
+  "settings": {
+    "title": "Ayarlar",
+    "appearance": "Görünüm",
+    "darkMode": "Karanlık Mod",
+    "lightMode": "Aydınlık Mod",
+    "language": "Dil",
+    "account": "Hesap",
+    "changeEmail": "E-posta Değiştir",
+    "changePassword": "Şifre Değiştir",
+    "currentPassword": "Mevcut Şifre",
+    "newEmail": "Yeni E-posta",
+    "newPassword": "Yeni Şifre",
+    "confirmNewPassword": "Yeni Şifre Tekrar",
+    "updateEmail": "E-postayı Güncelle",
+    "updatePassword": "Şifreyi Güncelle"
+  },
+  "editor": {
+    "title": "Kod Editörü",
+    "html": "HTML",
+    "css": "CSS",
+    "preview": "Önizleme",
+    "run": "Çalıştır",
+    "reset": "Sıfırla",
+    "theme": "Tema"
+  },
+  "home": {
+    "hero": {
+      "title": "CSS'i Etkileşimli Öğren",
+      "subtitle": "Uygulamalı alıştırmalar, anlık geri bildirim ve destekleyici bir toplulukla CSS'i sıfırdan öğren.",
+      "cta": "Öğrenmeye Başla",
+      "ctaSecondary": "Editörü Dene"
+    },
+    "features": {
+      "title": "Neden LearnCSS?",
+      "interactive": {
+        "title": "Etkileşimli Dersler",
+        "description": "Uygulamalı alıştırmalar ve anlık geri bildirimle yaparak öğren."
+      },
+      "progress": {
+        "title": "İlerlemeni Takip Et",
+        "description": "Seni motive tutacak görsel panolar ve seriler."
+      },
+      "certificate": {
+        "title": "Sertifika Al",
+        "description": "CSS becerilerini sergilemek için sertifika kazan."
+      }
+    }
+  }
+}

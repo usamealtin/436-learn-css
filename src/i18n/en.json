@@ -1,0 +1,118 @@
+{
+  "common": {
+    "home": "Home",
+    "courses": "Courses",
+    "editor": "Editor",
+    "dashboard": "Dashboard",
+    "settings": "Settings",
+    "profile": "Profile",
+    "logout": "Logout",
+    "login": "Login",
+    "signup": "Sign Up",
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "save": "Save",
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success"
+  },
+  "auth": {
+    "signIn": "Sign In",
+    "signUp": "Sign Up",
+    "forgotPassword": "Forgot Password?",
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "username": "Username",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "resetPassword": "Reset Password",
+    "sendResetLink": "Send Reset Link",
+    "backToLogin": "Back to Login",
+    "noAccount": "Don't have an account?",
+    "haveAccount": "Already have an account?",
+    "resetEmailSent": "Password reset email sent!"
+  },
+  "lms": {
+    "modules": "Modules",
+    "lessons": "Lessons",
+    "quiz": "Quiz",
+    "nextLesson": "Next Lesson",
+    "previousLesson": "Previous Lesson",
+    "completeLesson": "Complete Lesson",
+    "startQuiz": "Start Quiz",
+    "submitQuiz": "Submit Quiz",
+    "quizPassed": "Quiz Passed! 🎉",
+    "quizFailed": "Quiz Failed",
+    "passingScore": "Passing Score: 80%",
+    "yourScore": "Your Score",
+    "moduleLocked": "Module Locked",
+    "lessonLocked": "Lesson Locked",
+    "completePrerequisites": "Complete previous lessons to unlock",
+    "retakeExam": "Retake Exam",
+    "finalExam": "Final Certificate Exam",
+    "certificate": "Certificate",
+    "downloadCertificate": "Download Certificate",
+    "addToLinkedIn": "Add to LinkedIn"
+  },
+  "dashboard": {
+    "welcome": "Welcome back, {{name}}!",
+    "progress": "Overall Progress",
+    "lessonsCompleted": "Lessons Completed",
+    "averageScore": "Average Score",
+    "currentStreak": "Current Streak",
+    "days": "days",
+    "activityCalendar": "Activity Calendar",
+    "shareProgress": "Share Progress",
+    "shareOnLinkedIn": "Share on LinkedIn",
+    "noActivity": "No activity yet. Start learning!"
+  },
+  "settings": {
+    "title": "Settings",
+    "appearance": "Appearance",
+    "darkMode": "Dark Mode",
+    "lightMode": "Light Mode",
+    "language": "Language",
+    "account": "Account",
+    "changeEmail": "Change Email",
+    "changePassword": "Change Password",
+    "currentPassword": "Current Password",
+    "newEmail": "New Email",
+    "newPassword": "New Password",
+    "confirmNewPassword": "Confirm New Password",
+    "updateEmail": "Update Email",
+    "updatePassword": "Update Password"
+  },
+  "editor": {
+    "title": "Code Editor",
+    "html": "HTML",
+    "css": "CSS",
+    "preview": "Preview",
+    "run": "Run",
+    "reset": "Reset",
+    "theme": "Theme"
+  },
+  "home": {
+    "hero": {
+      "title": "Master CSS Interactively",
+      "subtitle": "Learn CSS from zero to hero with hands-on exercises, real-time feedback, and a supportive community.",
+      "cta": "Start Learning",
+      "ctaSecondary": "Try Editor"
+    },
+    "features": {
+      "title": "Why LearnCSS?",
+      "interactive": {
+        "title": "Interactive Lessons",
+        "description": "Learn by doing with hands-on exercises and instant feedback."
+      },
+      "progress": {
+        "title": "Track Progress",
+        "description": "Visual dashboards and streaks to keep you motivated."
+      },
+      "certificate": {
+        "title": "Get Certified",
+        "description": "Earn a certificate to showcase your CSS skills."
+      }
+    }
+  }
+}

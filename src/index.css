@@ -1,0 +1,405 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: #1f2937;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #4b5563;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #6b7280;
+}
+
+/* Background grid pattern */
+.bg-grid-pattern {
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Smooth transitions */
+* {
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-duration: 200ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Card hover effect */
+.card-hover {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Button press effect */
+.btn-press:active {
+  transform: scale(0.98);
+}
+
+/* Animation for loading spinner */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Lesson Content Styling */
+.lesson-content h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.dark .lesson-content h2 {
+  color: #f3f4f6;
+  border-color: #374151;
+}
+
+.lesson-content h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #374151;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.dark .lesson-content h3 {
+  color: #e5e7eb;
+}
+
+.lesson-content h4 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #4b5563;
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.dark .lesson-content h4 {
+  color: #d1d5db;
+}
+
+.lesson-content p {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: #4b5563;
+  margin-bottom: 1rem;
+}
+
+.dark .lesson-content p {
+  color: #9ca3af;
+}
+
+.lesson-content ul, .lesson-content ol {
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.lesson-content li {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: #4b5563;
+  margin-bottom: 0.5rem;
+}
+
+.dark .lesson-content li {
+  color: #9ca3af;
+}
+
+.lesson-content strong {
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.dark .lesson-content strong {
+  color: #f3f4f6;
+}
+
+.lesson-content code {
+  background: #f3f4f6;
+  color: #e11d48;
+  padding: 0.125rem 0.375rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  font-family: 'Menlo', 'Monaco', 'Consolas', monospace;
+}
+
+.dark .lesson-content code {
+  background: #374151;
+  color: #fb7185;
+}
+
+.lesson-content pre {
+  background: #1f2937;
+  color: #e5e7eb;
+  padding: 1.25rem;
+  border-radius: 0.75rem;
+  overflow-x: auto;
+  margin-bottom: 1.25rem;
+  font-size: 0.875rem;
+  line-height: 1.7;
+}
+
+.dark .lesson-content pre {
+  background: #111827;
+  border: 1px solid #374151;
+}
+
+.lesson-content pre code {
+  background: transparent;
+  color: inherit;
+  padding: 0;
+  font-size: inherit;
+}
+
+.lesson-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.25rem;
+}
+
+.lesson-content th, .lesson-content td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.dark .lesson-content th, .dark .lesson-content td {
+  border-color: #374151;
+}
+
+.lesson-content th {
+  background: #f9fafb;
+  font-weight: 600;
+  color: #374151;
+}
+
+.dark .lesson-content th {
+  background: #1f2937;
+  color: #e5e7eb;
+}
+
+.lesson-content td {
+  color: #4b5563;
+}
+
+.dark .lesson-content td {
+  color: #9ca3af;
+}
+
+/* ==================== PAGE TRANSITIONS ==================== */
+.page-transition {
+  opacity: 0;
+  transform: translateY(16px);
+}
+
+.page-enter-active {
+  animation: pageSlideIn 0.45s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.page-enter-from {
+  opacity: 0;
+  transform: translateY(16px);
+}
+
+@keyframes pageSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Stagger children animations for lesson content */
+.page-enter-active .animate-stagger > * {
+  animation: staggerFadeIn 0.4s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.page-enter-active .animate-stagger > *:nth-child(1) { animation-delay: 0.05s; }
+.page-enter-active .animate-stagger > *:nth-child(2) { animation-delay: 0.1s; }
+.page-enter-active .animate-stagger > *:nth-child(3) { animation-delay: 0.15s; }
+.page-enter-active .animate-stagger > *:nth-child(4) { animation-delay: 0.2s; }
+.page-enter-active .animate-stagger > *:nth-child(5) { animation-delay: 0.25s; }
+.page-enter-active .animate-stagger > *:nth-child(6) { animation-delay: 0.3s; }
+
+@keyframes staggerFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Smooth route transitions */
+.route-transition {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Lesson top-bar slide */
+.lesson-topbar {
+  transition: box-shadow 0.3s ease, background-color 0.2s ease;
+}
+
+.lesson-topbar.scrolled {
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Progress bar smooth fill */
+.progress-fill {
+  transition: width 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Button ripple effect */
+.btn-ripple {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-ripple::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle, rgba(255,255,255,0.3) 10%, transparent 10.01%);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  transform: scale(10, 10);
+  opacity: 0;
+  transition: transform 0.4s, opacity 0.8s;
+}
+
+.btn-ripple:active::after {
+  transform: scale(0, 0);
+  opacity: 0.3;
+  transition: 0s;
+}
+
+/* Module card entrance */
+@keyframes moduleSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.module-card-enter {
+  animation: moduleSlideUp 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* Quiz question slide */
+@keyframes questionSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.question-enter {
+  animation: questionSlideIn 0.35s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* Certificate confetti burst */
+@keyframes confettiBurst {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+/* Fade in for overlays */
+@keyframes overlayFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.overlay-enter {
+  animation: overlayFadeIn 0.2s ease forwards;
+}
+
+.lesson-content .example {
+  background: #eff6ff;
+  border-left: 4px solid #3b82f6;
+  padding: 1rem 1.25rem;
+  border-radius: 0 0.5rem 0.5rem 0;
+  margin-bottom: 1.25rem;
+}
+
+.dark .lesson-content .example {
+  background: #1e3a5f33;
+  border-color: #60a5fa;
+}

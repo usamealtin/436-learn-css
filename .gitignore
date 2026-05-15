@@ -1,0 +1,20 @@
+# Dependency directories
+node_modules/
+dist/
+build/
+
+# Environment variables (KRİTİK!)
+.env
+.env.local
+server/.env
+
+# IDE and System files
+.vscode/
+.DS_Store
+Thumbs.db
+
+# TypeScript build info
+*.tsbuildinfo
+
+# Vite specific
+core
