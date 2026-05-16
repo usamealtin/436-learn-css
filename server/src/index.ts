@@ -16,7 +16,10 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 const ENV = process.env.NODE_ENV || 'development';
 
-app.use(cors());
+app.use(cors({
+  origin: 'https://436learncss.vercel.app',
+  credentials: true
+}));
 app.use(express.json());
 
 app.use('/api/certificates', certificateRoutes);
