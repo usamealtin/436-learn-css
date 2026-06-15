@@ -64,7 +64,7 @@ export const submitQuiz = async (req: Request, res: Response, next: NextFunction
 
     const totalQuestions = correctOptions.rows.length;
     const scorePercent = totalQuestions > 0 ? Math.round((correctCount / totalQuestions) * 100) : 0;
-    const isPassed = scorePercent >= 70;
+    const isPassed = scorePercent >= 80;
 
     const attempt_id = uuidv4();
     await pool.query(
