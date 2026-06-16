@@ -27,8 +27,22 @@ const App: React.FC = () => {
             <Route path="/" element={<Layout />}>
               <Route index element={<Home />} />
               <Route path="courses" element={<Courses />} />
-              <Route path="courses/:moduleId/:lessonId" element={<LessonView />} />
-              <Route path="courses/:moduleId/retake" element={<RetakeExam />} />
+              <Route
+                path="courses/:moduleId/:lessonId"
+                element={
+                  <ProtectedRoute>
+                    <LessonView />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="courses/:moduleId/retake"
+                element={
+                  <ProtectedRoute>
+                    <RetakeExam />
+                  </ProtectedRoute>
+                }
+              />
               <Route path="editor" element={<Editor />} />
               
               {/* Protected Routes */}
