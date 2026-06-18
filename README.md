@@ -35,3 +35,7 @@ npm install
 
 # Backend paketleri
 npm install --prefix server
+
+# Projeyi Çalıştırma
+npm run start:all
+
