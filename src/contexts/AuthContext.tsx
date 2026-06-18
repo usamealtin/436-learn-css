@@ -1,16 +1,5 @@
 import React, { createContext, useContext, useState, useEffect, useCallback } from 'react';
-import { api } from '@/services/api';
-
-export interface User {
-  _id: string;
-  email: string;
-  username: string;
-  firstName: string;
-  lastName: string;
-  role: 'student' | 'instructor' | 'admin';
-  createdAt: string;
-  updatedAt: string;
-}
+import { api, type User } from '@/services/api';
 
 export interface AuthState {
   user: User | null;

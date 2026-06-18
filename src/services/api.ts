@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:3000/api';
+const API_URL = (import.meta.env.VITE_API_URL as string) || 'http://localhost:3000/api';
 const CURRENT_USER_KEY = 'learn-css-current-user';
 
 interface BackendUser {
@@ -184,6 +184,18 @@ export const api = {
 
     const result = await response.json();
     if (!response.ok) throw new Error(result.error || 'Update failed');
+    return mapUser(result.user);
+  },
+
+  async changeEmail(currentPassword: string, newEmail: string): Promise<User> {
+    const response = await fetch(`${API_URL}/auth/profile`, {
+      method: 'PATCH',
+      headers: { 'Content-Type': 'application/json', ...getAuthHeader() },
+      body: JSON.stringify({ currentPassword, newEmail }),
+    });
+
+    const result = await response.json();
+    if (!response.ok) throw new Error(result.error || 'Email change failed');
     return mapUser(result.user);
   },
 

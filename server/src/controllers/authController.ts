@@ -103,3 +103,80 @@ export const getMe = async (req: any, res: Response, next: NextFunction) => {
     next(err);
   }
 };
+
+export const updateProfile = async (req: any, res: Response, next: NextFunction) => {
+  const { currentPassword, newEmail } = req.body;
+
+  try {
+    const result = await pool.query('SELECT * FROM learners WHERE learner_id = $1', [req.user.id]);
+    const user = result.rows[0];
+
+    if (!user) {
+      return res.status(404).json({ error: 'Kullanıcı bulunamadı.' });
+    }
+
+    const isMatch = await bcrypt.compare(currentPassword, user.password_hash);
+    if (!isMatch) {
+      return res.status(400).json({ error: 'Geçersiz mevcut şifre.' });
+    }
+
+    if (newEmail && newEmail !== user.email) {
+      const emailExists = await pool.query(
+        'SELECT learner_id FROM learners WHERE email = $1 AND learner_id <> $2',
+        [newEmail, req.user.id]
+      );
+
+      if (emailExists.rows.length > 0) {
+        return res.status(400).json({ error: 'Bu email zaten kullanımda.' });
+      }
+    }
+
+    const updatedUser = await pool.query(
+      'UPDATE learners SET email = $1 WHERE learner_id = $2 RETURNING learner_id, email, user_name, created_at',
+      [newEmail || user.email, req.user.id]
+    );
+
+    const updated = updatedUser.rows[0];
+
+    res.json({
+      user: {
+        id: updated.learner_id,
+        email: updated.email,
+        username: updated.user_name,
+        createdAt: updated.created_at
+      }
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+
+export const changePassword = async (req: any, res: Response, next: NextFunction) => {
+  const { currentPassword, newPassword } = req.body;
+
+  try {
+    const result = await pool.query('SELECT * FROM learners WHERE learner_id = $1', [req.user.id]);
+    const user = result.rows[0];
+
+    if (!user) {
+      return res.status(404).json({ error: 'Kullanıcı bulunamadı.' });
+    }
+
+    const isMatch = await bcrypt.compare(currentPassword, user.password_hash);
+    if (!isMatch) {
+      return res.status(400).json({ error: 'Geçersiz mevcut şifre.' });
+    }
+
+    const salt = await bcrypt.genSalt(10);
+    const hashedPassword = await bcrypt.hash(newPassword, salt);
+
+    await pool.query(
+      'UPDATE learners SET password_hash = $1 WHERE learner_id = $2',
+      [hashedPassword, req.user.id]
+    );
+
+    res.status(200).json({ message: 'Şifre başarıyla güncellendi.' });
+  } catch (err) {
+    next(err);
+  }
+};

@@ -14,7 +14,9 @@ export const testDbConnection = async () => {
   try {
     const res = await pool.query('SELECT NOW()');
     console.log('✅ Neon DB Bağlantısı Başarılı:', res.rows[0].now);
+    return res;
   } catch (err) {
     console.error('❌ Neon DB Bağlantı Hatası:', err);
+    throw err;
   }
 };

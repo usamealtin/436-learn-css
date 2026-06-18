@@ -32,6 +32,24 @@ export const schemas = {
     login: Joi.object({
       email: Joi.string().email().required(),
       password: Joi.string().required()
+    }),
+    profileUpdate: Joi.object({
+      currentPassword: Joi.string().required().messages({
+        'any.required': 'Mevcut şifre zorunludur.'
+      }),
+      newEmail: Joi.string().email().required().messages({
+        'string.email': 'Geçerli bir e-posta adresi giriniz.',
+        'any.required': 'Yeni e-posta zorunludur.'
+      })
+    }),
+    changePassword: Joi.object({
+      currentPassword: Joi.string().required().messages({
+        'any.required': 'Mevcut şifre zorunludur.'
+      }),
+      newPassword: Joi.string().min(6).required().messages({
+        'string.min': 'Yeni şifre en az 6 karakter olmalıdır.',
+        'any.required': 'Yeni şifre zorunludur.'
+      })
     })
   },
 
