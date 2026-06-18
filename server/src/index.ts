@@ -17,7 +17,11 @@ const PORT = process.env.PORT || 3000;
 const ENV = process.env.NODE_ENV || 'development';
 
 app.use(cors({
-  origin: 'https://436learncss.vercel.app',
+  origin: [
+    'https://436learncss.vercel.app',
+    'http://localhost:5173',
+    'http://127.0.0.1:5173'
+  ],
   credentials: true
 }));
 app.use(express.json());
